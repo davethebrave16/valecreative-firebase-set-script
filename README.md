@@ -1,6 +1,9 @@
-# Valecreative Claim Set Script
+# Valecreative Firebase scripts
 
-Command-line utilities for managing Firebase custom claims and Firestore data.
+Command-line utilities for the `valecreative-prod` Firebase project:
+
+- `set_admin_claim.py` — grant/remove the `admin` custom claim used by the backoffice
+- `normalize_data.py` — align existing Firestore/Storage data (image file names, Cache-Control, alt texts, slugs) with the rules the backoffice applies to new uploads, and clean up unused Storage files (see below)
 
 ## Requirements
 
@@ -98,3 +101,27 @@ Everything is a dry run unless `--apply` is passed. Each run writes to `runs/<ti
 
 The script is idempotent (a second run on normalized data plans no changes) and isolates errors per document.
 It needs `SERVICE_ACCOUNT_PATH` and `PROJECT_ID` in `.env` (optional `STORAGE_BUCKET`, default `<PROJECT_ID>.firebasestorage.app`).
+
+#### History and current state (valecreative-prod)
+
+| Date | Run | What happened |
+|---|---|---|
+| 2026-09-27 | `runs/20260927-213756-apply` | Test on one document (`artworks/0TJGid1E1OrsGeKdezGL`, "Nonna") |
+| 2026-09-27 | `runs/20260927-215132-apply` | Full apply: 205 files renamed, Cache-Control on 212 objects, 206 alt texts, 10 slugs (redirects added to the site's `firebase.json`) |
+| 2026-09-27 | `runs/cleanup-20260927-230940-apply.log`, `…-231247-apply.log` | Cleanup (a): 206 old renamed files deleted, after the site was republished and verified |
+| 2026-09-27 | `runs/cleanup-20260927-231611-apply.log` | Cleanup (b): 23 orphan folders deleted (122.7 MB, incl. 5 unreferenced TIFFs) |
+
+After the cleanup the bucket holds 212 objects (195.6 MB), all referenced by a document, and a full `normalize` dry run plans 0 changes.
+The `rollback` command can no longer be used for these runs: the old files it would point back to have been deleted.
+
+**Backup** — `backup-storage-20260927/` (git-ignored) is a full copy of the bucket taken *before* the normalization
+(235 original files, 319 MB, same paths as in the bucket). It is the only remaining copy of the original file names,
+of the 23 deleted orphans and of the 5 TIFFs (checked: same size and MD5 as the deleted objects). Keep a copy outside
+this repository (external disk / cloud) and do not delete it. The `runs/` folders (reports, `backup.json`, rollback
+manifests, cleanup logs) are git-ignored too.
+
+**Recommended routine** — run `normalize` in dry run from time to time (e.g. monthly or after a big upload session).
+If it plans changes: `--apply`, then "Pubblica" in the backoffice, add any slug redirects from `redirects.json` to the
+site's `firebase.json`, and only after the site is republished run `cleanup-old-files --renamed` / `--orphans`
+(dry run first). If the backoffice rules in `slugify.ts` / `imageFileName.ts` change, regenerate the fixtures with
+`./tests/generate_ts_fixtures.sh` and run the tests before using the script.
