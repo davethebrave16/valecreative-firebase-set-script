@@ -13,3 +13,4 @@ google-sa-key*.json
 
 # normalize_data.py outputs (reports, backups, rollback manifests)
 runs/
+backup-storage-*
