@@ -1,0 +1,109 @@
+{
+	"slugs": {
+		"La Compagnia dell'Anello": "la-compagnia-dellanello",
+		"Città – d’arte!": "citta-darte",
+		"Coppia di fidanzati": "coppia-di-fidanzati",
+		"Padre e figlio": "padre-e-figlio",
+		"Sovrani": "sovrani",
+		"diana---sottobosco": "diana-sottobosco",
+		"asia---lana---betty": "asia-lana-betty",
+		"Diana - sottobosco": "diana-sottobosco",
+		"  Le radici del futuro  ": "le-radici-del-futuro",
+		"Opera n°3 / 2024": "opera-n-3-2024",
+		"Perché è così?": "perche-e-cosi",
+		"a -- b": "a-b",
+		"ÀÉÎÕÜ çñ": "aeiou-cn",
+		"L‘albero ‘di’ `casa`": "lalbero-di-casa",
+		"homepage_hero": "homepage-hero",
+		"Acrilico su tela": "acrilico-su-tela",
+		"Tecnica mista": "tecnica-mista",
+		"Il bacio": "il-bacio",
+		"UPPER lower 123": "upper-lower-123",
+		"---": "",
+		"": "",
+		"Ñandú façade – naïve café": "nandu-facade-naive-cafe",
+		"Grüße": "gru-e",
+		"tab\tand\nnewline": "tab-and-newline",
+		"emoji 🎨 art": "emoji-art",
+		"già-conforme": "gia-conforme"
+	},
+	"patterns": {
+		"le-radici-del-futuro": {
+			"slug": true,
+			"content": true
+		},
+		"Coppia di fidanzati": {
+			"slug": false,
+			"content": false
+		},
+		"a--b": {
+			"slug": false,
+			"content": false
+		},
+		"-a": {
+			"slug": false,
+			"content": false
+		},
+		"a-": {
+			"slug": false,
+			"content": false
+		},
+		"homepage_hero": {
+			"slug": false,
+			"content": true
+		},
+		"bio": {
+			"slug": true,
+			"content": true
+		},
+		"albero-2": {
+			"slug": true,
+			"content": true
+		},
+		"diana---sottobosco": {
+			"slug": false,
+			"content": false
+		},
+		"Sovrani": {
+			"slug": false,
+			"content": false
+		},
+		"": {
+			"slug": false,
+			"content": false
+		},
+		"a_b-c": {
+			"slug": false,
+			"content": true
+		},
+		"_a": {
+			"slug": false,
+			"content": false
+		}
+	},
+	"extensions": {
+		"IMG_5860.JPG": "jpg",
+		"495658824_1234567890_n.jpg": "jpg",
+		"WhatsApp Image 2026-07-15 at 12 (4).jpg": "jpg",
+		"generosità.tif": "tif",
+		"terra e acqua.tif": "tif",
+		"rtu.jpeg": "jpeg",
+		"noext": "jpg",
+		".jpg": "jpg",
+		"photo.PNG": "png",
+		"archive.tar.gz": "gz",
+		"Città d’arte.JPEG": "jpeg"
+	},
+	"cover": [
+		"nonna.jpg",
+		"img-5860.jpg",
+		"whatsapp-image-2026-07-15-at-12-4.jpg",
+		"padre-e-figlio.jpg",
+		"image.jpg"
+	],
+	"gallery": [
+		"le-radici-1.jpg",
+		"le-radici-12.jpeg",
+		"whatsapp-image-2.jpg"
+	]
+}

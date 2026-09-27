@@ -10,3 +10,6 @@ dist/
 build/
 .pytest_cache/
 google-sa-key*.json
+
+# normalize_data.py outputs (reports, backups, rollback manifests)
+runs/

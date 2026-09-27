@@ -1,0 +1,19 @@
+{
+	"slugs": [
+		"La Compagnia dell'Anello", "Città – d’arte!", "Coppia di fidanzati", "Padre e figlio", "Sovrani",
+		"diana---sottobosco", "asia---lana---betty", "Diana - sottobosco", "  Le radici del futuro  ",
+		"Opera n°3 / 2024", "Perché è così?", "a -- b", "ÀÉÎÕÜ çñ", "L‘albero ‘di’ `casa`", "homepage_hero",
+		"Acrilico su tela", "Tecnica mista", "Il bacio", "UPPER lower 123", "---", "", "Ñandú façade – naïve café",
+		"Grüße", "tab\tand\nnewline", "emoji 🎨 art", "già-conforme"
+	],
+	"patterns": [
+		"le-radici-del-futuro", "Coppia di fidanzati", "a--b", "-a", "a-", "homepage_hero", "bio", "albero-2",
+		"diana---sottobosco", "Sovrani", "", "a_b-c", "_a"
+	],
+	"files": [
+		"IMG_5860.JPG", "495658824_1234567890_n.jpg", "WhatsApp Image 2026-07-15 at 12 (4).jpg", "generosità.tif",
+		"terra e acqua.tif", "rtu.jpeg", "noext", ".jpg", "photo.PNG", "archive.tar.gz", "Città d’arte.JPEG"
+	],
+	"cover": [["nonna", "495658824_1234567890_n.jpg"], ["", "IMG_5860.JPG"], [null, "WhatsApp Image 2026-07-15 at 12 (4).jpg"], ["Padre e figlio", "x.JPG"], ["", ".jpg"]],
+	"gallery": [["le-radici", 1, "IMG.JPG"], ["le-radici", 12, "a.jpeg"], ["", 2, "WhatsApp Image.jpg"]]
+}
